@@ -217,7 +217,7 @@ if [ -x /usr/local/bin/elk-post-hooks.sh ]; then
       echo "waiting for Kibana to be up ($counter/$KIBANA_CONNECT_RETRY)"
     done
     if [ ! "$(curl ${KIBANA_URL} 2> /dev/null)" ]; then
-      echo "Couln't start Kibana. Exiting."
+      echo "Couldn't start Kibana. Exiting."
       echo "Kibana log follows below."
       cat /var/log/kibana/kibana5.log
       exit 1
